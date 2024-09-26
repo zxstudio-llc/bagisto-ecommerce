@@ -30,6 +30,7 @@ return new class extends Migration
         });
 
         Schema::create('product_categories', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('product_id')->unsigned();
             $table->integer('category_id')->unsigned();
 
@@ -38,6 +39,7 @@ return new class extends Migration
         });
 
         Schema::create('product_relations', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('parent_id')->unsigned();
             $table->integer('child_id')->unsigned();
 
@@ -46,6 +48,7 @@ return new class extends Migration
         });
 
         Schema::create('product_super_attributes', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('product_id')->unsigned();
             $table->integer('attribute_id')->unsigned();
 
@@ -54,6 +57,7 @@ return new class extends Migration
         });
 
         Schema::create('product_up_sells', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('parent_id')->unsigned();
             $table->integer('child_id')->unsigned();
 
@@ -62,6 +66,7 @@ return new class extends Migration
         });
 
         Schema::create('product_cross_sells', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('parent_id')->unsigned();
             $table->integer('child_id')->unsigned();
 

@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cms_page_channels', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('cms_page_id')->unsigned();
             $table->integer('channel_id')->unsigned();
 

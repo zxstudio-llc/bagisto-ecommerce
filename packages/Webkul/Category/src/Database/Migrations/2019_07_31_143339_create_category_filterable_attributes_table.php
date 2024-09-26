@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('category_filterable_attributes', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('category_id')->unsigned();
             $table->integer('attribute_id')->unsigned();
 

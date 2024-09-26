@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('channel_inventory_sources', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('channel_id')->unsigned();
             $table->integer('inventory_source_id')->unsigned();
 
